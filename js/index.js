@@ -23,3 +23,16 @@ script.async = true;
 document.getElementsByTagName("script")[0].parentNode.appendChild(script);
 
 
+const aTags = document.querySelectorAll('a');
+aTags.forEach(function(currentValue){
+    currentValue.addEventListener('click', function(e){
+        e.preventDefault();
+        e.target.style.color = 'lightblue';
+    }) 
+});
+
+let container = document.querySelector('.container home');
+container.addEventListener('click', function(e){
+e.style.backgroundColor = 'lightblue';
+console.log('here I am');
+});
